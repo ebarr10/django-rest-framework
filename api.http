@@ -24,11 +24,11 @@ Content-Type: application/json
 
 POST http://127.0.0.1:8000/products/ HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyMDI2MjM3LCJpYXQiOjE3NTIwMjU5MzcsImp0aSI6ImExY2ExMjBiZjg4NzRhNWM5ZWFkYjUyZTU2ZjY0ZDQ5IiwidXNlcl9pZCI6Mn0.m-jW74wyRaIMQewnqBrsb_xkuNDvhJdCQEPv584t3IE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyMzIxODk2LCJpYXQiOjE3NTIzMjE1OTYsImp0aSI6IjliMDhmM2E4MjgwMTRiYzJiM2UxYjQ3Yjc4MGJlN2M3IiwidXNlcl9pZCI6MX0.f-WXnDIJ5FeU2_vBB7Zx8flAqRI17hogsvU__DnV0jM
 
 {
     "name": "Television",
-    "price": 300.00,
+    "price": -300.00,
     "stock": 14,
     "description": "An amazing new TV"
 }
@@ -39,8 +39,8 @@ POST http://127.0.0.1:8000/api/token/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "ebarr",
-    "password": "password123"
+    "username": "admin",
+    "password": "test"
 }
 
 ###
