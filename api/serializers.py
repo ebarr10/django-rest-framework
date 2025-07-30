@@ -6,7 +6,15 @@ from .models import Product, Order, OrderItem, User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ("username", "email", "is_staff")
+        # fields = (
+        #     "password",
+        #     "user_permissions",
+        #     "is_authenticated",
+        #     "get_full_name",
+        #     "orders",
+        # )
+        # exclude = ("password", "user_permissions", "is_authenticated", "get_full_name")
+        fields = ("username", "email", "is_staff", "is_superuser")
 
 
 class ProductSerializer(serializers.ModelSerializer):

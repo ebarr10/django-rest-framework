@@ -115,7 +115,7 @@ class ProductInfoAPIView(APIView):
         return Response(serializer.data)
 
 
-class UserListView(generics.ListView):
+class UserListView(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     pagination_class = None
