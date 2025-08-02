@@ -1,4 +1,6 @@
 from django.shortcuts import get_object_or_404
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from django.db.models import Max
 from api.serializers import (
     OrderSerializer,
@@ -32,12 +34,22 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
     ]
     search_fields = ["=name", "description"]
     ordering_fields = ["name", "price", "stock"]
-    pagination_class = LimitOffsetPagination
+    pagination_class = None
     # pagination_class = PageNumberPagination
     # pagination_class.page_size = 2
     # pagination_class.page_query_param = "pagenum"
     # pagination_class.page_size_query_param = "size"
     # pagination_class.max_page_size = 6
+
+    @method_decorator(cache_page(60 * 15, key_prefix="product_list"))
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
+
+    def get_queryset(self):
+        import time
+
+        time.sleep(2)
+        return super().get_queryset()
 
     def get_permissions(self):
         self.permission_classes = [AllowAny]

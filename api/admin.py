@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from api.models import Order, OrderItem, User
+from api.models import Order, OrderItem, Product, User
 
 
 class OrderItemInline(admin.TabularInline):
@@ -12,4 +12,5 @@ class OrderAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Order, OrderAdmin)
+admin.site.register(Product)
 admin.site.register(User)
