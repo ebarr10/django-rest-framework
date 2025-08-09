@@ -7,7 +7,11 @@ urlpatterns = [
     path("products/available", views.AvailableProductListAPIView.as_view()),
     path("products/empty", views.OutOfStockProductListAPIView.as_view()),
     path("products/info/", views.ProductInfoAPIView.as_view()),
-    path("products/<int:product_id>/", views.ProductDetailAPIView.as_view()),
+    path(
+        "products/<int:product_id>/",
+        views.ProductDetailAPIView.as_view(),
+        name="product-detail",
+    ),
     path("users/", views.UserListView.as_view()),
 ]
 

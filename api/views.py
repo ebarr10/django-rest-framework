@@ -81,7 +81,7 @@ class ProductDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
 
     def get_permissions(self):
         self.permission_classes = [AllowAny]
-        if self.request.method in ["PUT", "DELETE"]:
+        if self.request.method in ["PUT", "PATCH", "DELETE"]:
             self.permission_classes = [IsAdminUser]
         return super().get_permissions()
 
