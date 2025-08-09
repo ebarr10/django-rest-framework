@@ -24,7 +24,7 @@ Content-Type: application/json
 
 POST http://127.0.0.1:8000/products/ HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyMzIxODk2LCJpYXQiOjE3NTIzMjE1OTYsImp0aSI6IjliMDhmM2E4MjgwMTRiYzJiM2UxYjQ3Yjc4MGJlN2M3IiwidXNlcl9pZCI6MX0.f-WXnDIJ5FeU2_vBB7Zx8flAqRI17hogsvU__DnV0jM
+Authorization: Bearer _____
 
 {
     "name": "Television",
@@ -46,23 +46,23 @@ Content-Type: application/json
 ###
 
 GET http://127.0.0.1:8000/user-orders/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyMDI2NzIzLCJpYXQiOjE3NTIwMjY0MjMsImp0aSI6IjQxY2MwMjYzZjBlMDRlY2Q4MDU2M2Y0ZjRiNzViOWM3IiwidXNlcl9pZCI6Mn0.aBxhZlYC7TFWx6LYllLapk6PuoPZ1Anbv4_eLdtq73s
+Authorization: Bearer _____
 
 ###
 
 GET http://127.0.0.1:8000/orders/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTUxODg2LCJpYXQiOjE3NTQxNTE1ODYsImp0aSI6IjgwMjFhMmJmNGFkNzQwYjVhY2ZjNGMyZDRiNDhmYTkxIiwidXNlcl9pZCI6MX0.BHluaeZnBUzGeiPOb7J8B0vPrgKT38yGqii7zsrb8sk
+Authorization: Bearer _____
 
 ###
 
 GET http://127.0.0.1:8000/orders/b1a066b9-897f-4ab2-930d-37b8b4371a8a HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzNzE1NTA5LCJpYXQiOjE3NTM3MTUyMDksImp0aSI6IjgxZWFkODliNThkNjQxZmVhZWNmOGJkNzJkNzIwNTY1IiwidXNlcl9pZCI6MX0.13L_xDNgVAwWb2TYUlXXM3mRkTJrZ30kvHqdqcesZoI
+Authorization: Bearer _____
 
 ###
 
 POST http://127.0.0.1:8000/orders/ HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzNzE1MDU2LCJpYXQiOjE3NTM3MTQ3NTYsImp0aSI6IjllYzI3ZGIyMzAwOTQxZTM5ZTFmZDg2ZmE4MGY2Yzc1IiwidXNlcl9pZCI6MX0.MESrK3-F_pOumyPGrPSe0CGibBIZgINjiiod3gohHQ
+Authorization: Bearer _____
 
 {
     "status": "Pending",
@@ -82,7 +82,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 
 PUT http://127.0.0.1:8000/orders/b1a066b9-897f-4ab2-930d-37b8b4371a8a/ HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzNzE1MDc3LCJpYXQiOjE3NTM3MTQ3NzcsImp0aSI6IjczNzQ0NTc4Yzc1ZTRmZmI4ZWVhZWMzOGFkYWU4MTliIiwidXNlcl9pZCI6MX0.LkrJmT-bZ8-S366DBk2x6qIJ6xetiKnxIeWA01wS8zQ
+Authorization: Bearer _____
 
 {
     "status": "Pending",
@@ -102,4 +102,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 
 DELETE http://127.0.0.1:8000/orders/b1a066b9-897f-4ab2-930d-37b8b4371a8a/ HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzNzE1NTA5LCJpYXQiOjE3NTM3MTUyMDksImp0aSI6IjgxZWFkODliNThkNjQxZmVhZWNmOGJkNzJkNzIwNTY1IiwidXNlcl9pZCI6MX0.13L_xDNgVAwWb2TYUlXXM3mRkTJrZ30kvHqdqcesZoI
+Authorization: Bearer _____
