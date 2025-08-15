@@ -22,8 +22,8 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
 from rest_framework import viewsets
 from rest_framework.throttling import ScopedRateThrottle
-
 from api.throttles import GetThrottle, PostThrottle
+from api.tasks import send_order_confirmation_email
 
 
 class ProductListCreateAPIView(generics.ListCreateAPIView):
@@ -102,7 +102,10 @@ class OrderViewSet(viewsets.ModelViewSet):
         return super().list(request, *args, **kwargs)
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+        order = serializer.save(user=self.request.user)
+        send_order_confirmation_email.delay_on_commit(
+            order.order_id, self.request.user.email
+        )
 
     def get_serializer_class(self):
         # can also check if POST: if self.request.method == "POST"
